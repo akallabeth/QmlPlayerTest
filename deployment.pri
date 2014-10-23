@@ -7,8 +7,12 @@ android-no-sdk {
         target.path = /libs/x86
     } else: armeabi-v7a {
         target.path = /libs/armeabi-v7a
-    } else {
+    } else: armeabi {
         target.path = /libs/armeabi
+    } else: mips {
+        target.path = /libs/mips
+    } else {
+        target.path = /libs/unknown
     }
     export(target.path)
     INSTALLS += target
